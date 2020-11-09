@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.churkin.javaFX.crud_app.MainWindowController">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="606.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="menuItemNew" mnemonicParsing="false" onAction="#callAddUserForm" text="New" />
+                  <MenuItem fx:id="menuItemDelete" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="tabViewUsers" editable="true" layoutX="3.0" layoutY="32.0" prefHeight="300.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="tabColID" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="tabColEmail" prefWidth="205.0" text="Email" />
+            <TableColumn fx:id="tabColFirstName" prefWidth="161.0" text="FirstName" />
+            <TableColumn fx:id="tabColLastName" prefWidth="163.0" text="LastName" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
